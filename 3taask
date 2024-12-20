@@ -1,0 +1,118 @@
+/*task1*/
+
+import React, { useState } from "react";
+
+const ToggleParagraph = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsVisible((prev) => !prev);
+  };
+
+  return (
+    <div>
+      <button onClick={toggleVisibility}>
+        {isVisible ? "Hide" : "Show"} Paragraph
+      </button>
+      {isVisible && <p>This is the paragraph to toggle.</p>}
+    </div>
+  );
+};
+
+export default ToggleParagraph;
+
+
+
+
+
+
+/*task2*/
+/*import React, { useRef } from 'react';
+
+const ScrollToTop = () => {
+   
+    const topRef = useRef(null);
+
+
+    const handleScrollToTop = () => {
+        if (topRef.current) {
+            topRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    return (
+        <div>
+            <div ref={topRef}></div>
+
+         
+            <div style={{ height: '2000px', padding: '20px' }}>
+                <p>Scroll down to see the button!</p>
+            </div>
+
+        
+            <button
+                style={{
+                    position: 'fixed',
+                    bottom: '20px',
+                    right: '20px',
+                    padding: '10px 20px',
+                    fontSize: '16px',
+                }}
+                onClick={handleScrollToTop}
+            >
+                Scroll to Top
+            </button>
+        </div>
+    );
+};
+
+
+
+
+
+
+/*task3*/
+
+/*import React, { useState } from 'react';
+
+const RealTimeText = () => {
+
+  const [text, setText] = useState('');
+
+  const handleChange = (event) => {
+    setText(event.target.value);
+  };
+
+  return (
+    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <h2>Real-Time Text Update</h2>
+      <input
+        type="text"
+        placeholder="Type something..."
+        value={text}
+        onChange={handleChange}
+        style={{ padding: '8px', fontSize: '16px', width: '300px', marginBottom: '10px' }}
+      />
+      <p style={{ fontSize: '18px', color: '#333' }}>
+        {text}
+      </p>
+    </div>
+  );
+};
+
+export default RealTimeText;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
